@@ -1,6 +1,7 @@
 'use strict'
 
 const moment = require('moment')
+const Produto = use('App/Models/Produto')
 
 class ProdutoController {
   /**
