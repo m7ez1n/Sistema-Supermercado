@@ -13,7 +13,11 @@ class ProdutoController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index ({ request, response, view }) {}
+  async index ({ request, response, view }) {
+    const products = await Produto.all()
+
+    return products
+  }
 
   /**
    * Create/save a new produto.
@@ -23,7 +27,13 @@ class ProdutoController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async store ({ request, response }) {}
+  async store ({ request, response, auth }) {
+    const data = request.only(['marca', 'nome', 'preco', 'dataValidade'])
+
+    const produto = await Produto.create({ ...data, user_id: auth.user.id })
+
+    return produto
+  }
 
   /**
    * Display a single produto.
