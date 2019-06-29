@@ -97,7 +97,19 @@ class ProdutoController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy ({ params, request, response }) {}
+  async destroy ({ params, response, auth }) {
+    const product = await Produto.findOrFail(params.id)
+
+    if (product.user_id !== auth.user.id) {
+      return response.status(401).send({
+        error: {
+          message: 'Só usuário autorizado pode ter acesso ao produto'
+        }
+      })
+    }
+
+    await product.delete()
+  }
 }
 
 module.exports = ProdutoController
