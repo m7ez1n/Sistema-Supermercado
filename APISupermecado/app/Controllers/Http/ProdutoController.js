@@ -44,7 +44,19 @@ class ProdutoController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show ({ params, request, response, view }) {}
+  async show ({ params, response, auth }) {
+    const product = await Produto.findOrFail(params.id)
+
+    if (product.user_id !== auth.user.id) {
+      return response.status(401).send({
+        error: {
+          message: 'Só usuário que cadastrou o produto pode acessar'
+        }
+      })
+    }
+
+    return product
+  }
 
   /**
    * Update produto details.
