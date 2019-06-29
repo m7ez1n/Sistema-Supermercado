@@ -55,6 +55,8 @@ class ProdutoController {
       })
     }
 
+    await product.load('user')
+
     return product
   }
 
@@ -66,7 +68,26 @@ class ProdutoController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update ({ params, request, response }) {}
+  async update ({ params, request, response }) {
+    const product = await Produto.findOrFail(params.id)
+    const passed = moment().isAfter(product.dataValidade)
+
+    if (passed) {
+      return response.status(401).send({
+        error: {
+          message: 'Esse produto já venceu, retire do estoque!'
+        }
+      })
+    }
+
+    const data = request.only(['marca', 'nome', 'preco'])
+
+    product.merge(data)
+
+    await product.save()
+
+    return product
+  }
 
   /**
    * Delete a produto with id.
