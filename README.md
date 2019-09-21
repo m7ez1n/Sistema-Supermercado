@@ -4,14 +4,17 @@ Então essa é uma ideia que eu tive quando estava conversando com um colega. Se
 
 ## Qualquer contribuição é bem vinda, e eu agradeço :heart_eyes: :heartbeat:
 
-### Acessem a He4rtDevs: :exclamation: :purple_heart:
+<h2 align="center">
+  Acessem a He4rt :purple_heart:
+</h2>
 
-[He4rt](discord.io/He4rt)
-
-[Twitter](https://twitter.com/He4rtDevs)
-
-[Discord He4rt](discord.io/He4rt)
+<h3 align="center">
+  <img src="https://heartdevs.com/wp-content/uploads/2018/12/logo.png" width="215"><br>
+    Visite nosso discord, vamo codar junto!! :godmode:
+	<a href="https://discord.io/He4rt" target="_blank">
+	<img src="https://discordapp.com/api/guilds/452926217558163456/embed.png" alt="Discord server"/></a><br>
+</h3>
 
 [Twitter He4rt](https://twitter.com/He4rtDevs)
 
-[MyTwitter](https://twitter.com/m7Aei_He4rt)
+[Meu Twitter](https://twitter.com/m7AeiHe4rt)
