@@ -12,12 +12,12 @@ O banco terá três tabelas, users, categories e products.
 
 | Users | Categories | Products | 
 |-------|------------|----------|
-| name | padaria | ...          |
-| cargo | hortifruiti | ...     |
+| name  | padaria | ...          |
+| admin | hortifruiti | ...     |
 | senha | limpeza | ...         |
 | email | alimentos | ...       |
-|        |  bebidas | ...       |
-|        | papelaria | ...      |
+|       |  bebidas | ...        |
+|       | papelaria | ...       |
 
 ### Regras de negócios
 
@@ -29,8 +29,8 @@ O banco terá três tabelas, users, categories e products.
 
 ## To Do List 
 
-- [ ] Fazer a conexão com o banco de dados
-- [ ] Criar as migrations 
+- [X] Fazer a conexão com o banco de dados
+- [X] Criar as migrations 
 - [ ] Criar os models 
 - [ ] Criar os controllers 
 - [ ] Aplicar as regras de négocio
